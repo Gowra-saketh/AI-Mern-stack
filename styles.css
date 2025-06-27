@@ -1,438 +1,215 @@
-/* Color variables for easy theming */
-:root {
-  --primary-color: #1a202c; /* Dark slate */
-  --secondary-color: #2d3748; /* Darker slate */
-  --accent-color: #4299e1; /* Blue */
-  --light-gray: #f7fafc; /* Lighter background */
-  --text-color: #4a5568; /* Gray text */
-  --white-color: #ffffff;
-  --card-bg: #edf2f7; /* Light gray card */
-  --border-radius: 0.75rem;
-  --focus-ring: #63b3ed; /* Blue for focus states */
-}
+/* Import Poppins font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
+/* Base styles for body */
 body {
-  font-family: 'Inter', sans-serif;
-  background-color: var(--light-gray);
-  color: var(--text-color);
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-  scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+    background-color: #0f172a; /* Slate 900 */
+    color: #e2e8f0; /* Slate 200 */
 }
 
-h1, h2, h3 {
-  font-weight: 800;
-  color: var(--primary-color);
+/* Gradient text for headings and emphasis */
+.gradient-text {
+    background: linear-gradient(90deg, #38bdf8, #818cf8); /* Blue to Indigo */
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
 }
 
-.container {
-  max-width: 1280px;
-  margin: auto;
-  padding: 0 1.5rem;
-}
-
-header {
-  background-color: var(--white-color);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 0;
-}
-
-.logo {
-  font-weight: 800;
-  font-size: 1.75rem;
-  color: var(--primary-color);
-}
-
-.nav-links {
-  display: flex;
-  gap: 2rem;
-  font-weight: 600;
-}
-
-.nav-links span {
-  cursor: pointer;
-  padding: 0.5rem 0;
-  transition: color 0.3s ease, border-bottom 0.3s ease;
-  color: var(--text-color);
-}
-
-.nav-links span:hover,
-.nav-links span.active {
-  color: var(--accent-color);
-  border-bottom: 2px solid var(--accent-color);
-}
-
-.btn-primary {
-  background-color: var(--primary-color);
-  color: var(--white-color);
-  font-weight: 700;
-  padding: 0.75rem 2rem;
-  border-radius: var(--border-radius);
-  cursor: pointer;
-  border: none;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.btn-primary:hover {
-  background-color: var(--secondary-color);
-  transform: translateY(-2px);
-}
-.btn-primary:active {
-  transform: translateY(0);
-}
-
-.hamburger {
-  display: none;
-  font-size: 1.75rem;
-  cursor: pointer;
-  color: var(--primary-color);
-}
-
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    gap: 1.5rem;
-    background: var(--white-color);
-    padding: 1.5rem;
-    position: absolute;
-    top: 70px;
-    right: 1.5rem;
-    width: calc(100% - 3rem);
-    border-radius: var(--border-radius);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
-  .nav-links.open {
-    display: flex;
-  }
-  .hamburger {
-    display: block;
-  }
-}
-
-.hero {
-  text-align: center;
-  padding: 6rem 1rem;
-  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1542831371-d10be1dfd332?fit=crop&w=1600&q=80') no-repeat center center / cover;
-  color: var(--white-color);
-  border-radius: var(--border-radius);
-  margin-top: 2rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-}
-
-.hero h1 {
-  color: var(--white-color);
-  font-size: 3.5rem;
-  margin-bottom: 1rem;
-  line-height: 1.2;
-}
-
-.hero p {
-  font-size: 1.25rem;
-  max-width: 800px;
-  margin: 0 auto 2rem;
-  color: #e2e8f0;
-}
-
-.hero .btn-primary {
-  background-color: var(--accent-color);
-  color: var(--white-color);
-}
-
-.hero .btn-primary:hover {
-  background-color: #3182ce;
-}
-
-section {
-  padding: 4rem 0;
-}
-
-.cards-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2.5rem;
-  /* Added for consistent card height */
-  align-items: stretch;
-}
-
+/* Card styling with backdrop filter and transition for hover effects */
 .card {
-  background: var(--card-bg);
-  padding: 2rem;
-  border-radius: var(--border-radius);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  border-top: 4px solid var(--accent-color);
+    background: rgba(30, 41, 59, 0.8); /* Slate 800 with transparency */
+    border: 1px solid rgba(100, 116, 139, 0.2); /* Slate 500 with transparency */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    transition: all 0.3s ease; /* Smooth transitions for hover */
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px); /* Lift on hover */
+    box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.3); /* Blue shadow on hover */
 }
 
-.card h3 {
-  font-size: 1.5rem;
-  margin-bottom: 0.75rem;
-  color: var(--primary-color);
+/* Progress bar styling */
+.progress-bar {
+    height: 5px;
+    background: linear-gradient(90deg, #38bdf8, #818cf8);
+    border-radius: 5px;
 }
 
-.card p {
-  font-size: 1rem;
-  margin-bottom: 1rem;
-  color: var(--text-color);
+/* Phase card specific styling */
+.phase-card {
+    border-left: 4px solid #38bdf8; /* Blue left border */
+    transition: all 0.3s ease;
 }
 
-.card ul {
-  padding-left: 1.5rem;
-  list-style-type: disc;
-  color: var(--text-color);
+.phase-card:hover {
+    border-left-color: #818cf8; /* Change border color on hover */
+    background-color: rgba(30, 41, 59, 0.9); /* Darker background on hover */
 }
 
-.card li {
-  margin-bottom: 0.5rem;
+/* Resource card styling */
+.resource-card {
+    transition: all 0.3s ease;
+    border: 1px solid rgba(100, 116, 139, 0.2);
 }
 
-.card li strong {
-  color: var(--secondary-color);
+.resource-card:hover {
+    border-color: #38bdf8; /* Blue border on hover */
+    transform: translateY(-3px); /* Lift on hover */
 }
 
-footer {
-  text-align: center;
-  padding: 3rem 1.5rem;
-  font-size: 0.9rem;
-  color: var(--text-color);
-  background-color: var(--white-color);
-  margin-top: 4rem;
-  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.02);
+/* Skill pill styling */
+.skill-pill {
+    background: rgba(56, 189, 248, 0.1); /* Blue with transparency */
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    transition: all 0.3s ease;
 }
 
-/* My Learning Sidebar/Modal */
-.my-learning-sidebar {
-  position: fixed;
-  top: 0;
-  right: -400px; /* Hidden by default */
-  width: 380px;
-  height: 100%;
-  background-color: var(--white-color);
-  box-shadow: -4px 0 15px rgba(0, 0, 0, 0.1);
-  z-index: 101;
-  transition: right 0.3s ease-in-out; /* Smooth slide transition */
-  padding: 1.5rem;
-  overflow-y: auto;
+.skill-pill:hover {
+    background: rgba(56, 189, 248, 0.2); /* Darker background on hover */
 }
 
-.my-learning-sidebar.open {
-  right: 0;
+/* Custom scrollbar for better aesthetics */
+::-webkit-scrollbar {
+    width: 8px;
 }
 
-.my-learning-sidebar-close {
-  position: sticky; /* Make close button sticky at the top */
-  top: 0;
-  float: right; /* Float to the right within its flow */
-  font-size: 2rem;
-  cursor: pointer;
-  color: var(--primary-color);
-  background-color: var(--white-color); /* Match sidebar background */
-  padding-left: 0.5rem; /* Add some padding for spacing */
-  z-index: 102; /* Ensure it's above other sidebar content */
-}
-/* Clear float for subsequent content */
-.my-learning-sidebar-close + * {
-  clear: both;
+::-webkit-scrollbar-track {
+    background: #1e293b; /* Slate 800 */
 }
 
-.my-learning-section {
-  margin-bottom: 2rem;
-  padding-bottom: 1.5rem;
-  border-bottom: 1px solid var(--light-gray);
+::-webkit-scrollbar-thumb {
+    background: #475569; /* Slate 600 */
+    border-radius: 4px;
 }
 
-.my-learning-section:last-child {
-  border-bottom: none;
-  margin-bottom: 0;
-  padding-bottom: 0;
+::-webkit-scrollbar-thumb:hover {
+    background: #64748b; /* Slate 500 */
 }
 
-.my-learning-section h2 {
-  font-size: 1.75rem;
-  margin-bottom: 1rem;
-  color: var(--primary-color);
+/* Navigation item hover effects */
+.nav-item {
+    transition: all 0.3s ease;
 }
 
-/* Timer Styles within sidebar */
-.timer {
-  font-size: 2.25rem;
-  font-weight: 700;
-  color: var(--primary-color);
-  margin-bottom: 1rem;
-  text-align: center;
-  background-color: var(--card-bg); /* Light background for timer */
-  padding: 1rem;
-  border-radius: var(--border-radius);
-  box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
-}
-.timer-controls button {
-  margin: 0 0.5rem;
-  padding: 0.6rem 1.2rem;
-  font-size: 0.9rem;
-  border-radius: 0.5rem;
-  transition: background-color 0.2s ease, transform 0.1s ease;
+.nav-item:hover {
+    color: #38bdf8; /* Blue color on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
 }
 
-/* Checklist Styles within sidebar */
-.checklist-item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 0.75rem;
-  font-size: 1rem;
-  padding: 0.5rem;
-  background-color: var(--light-gray);
-  border-radius: 0.5rem;
-  transition: background-color 0.2s ease, box-shadow 0.2s ease;
-  position: relative; /* For delete button positioning */
-  overflow: hidden; /* Hide overflow for delete button slide */
+/* Active navigation item styling */
+.active-nav {
+    color: #38bdf8;
+    border-bottom: 2px solid #38bdf8;
 }
 
-.checklist-item:hover {
-    background-color: #e2e8f0; /* Slightly darker on hover */
-    box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+/* Animated background for hero section */
+.animated-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.1;
 }
 
-.checklist-item input[type="checkbox"] {
-  margin-right: 0.75rem;
-  min-width: 20px;
-  min-height: 20px;
-  cursor: pointer;
-  accent-color: var(--accent-color); /* Tint checkbox with accent color */
-}
-.checklist-item label {
-  cursor: pointer;
-  flex-grow: 1;
-  line-height: 1.4; /* Better spacing for text */
-  word-break: break-word; /* Handle long task names */
-}
-.checklist-item.completed label {
-  text-decoration: line-through;
-  color: #718096; /* gray-500 */
-  transition: color 0.3s ease;
-}
-.add-task-form {
-  display: flex;
-  margin-top: 1rem;
-  gap: 0.5rem;
-}
-.add-task-form input {
-  flex-grow: 1;
-  padding: 0.6rem 1rem;
-  border: 1px solid #e2e8f0;
-  border-radius: 0.5rem;
-  outline: none; /* Remove default outline */
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
-}
-.add-task-form input:focus {
-  border-color: var(--accent-color);
-  box-shadow: 0 0 0 2px rgba(66, 153, 225, 0.5); /* Focus ring */
-}
-.add-task-form button {
-  padding: 0.6rem 1rem;
-  border-radius: 0.5rem;
-  white-space: nowrap; /* Prevent button text from wrapping */
-}
-.checklist-item .delete-task-btn {
-  background-color: #ef4444; /* Red-500 */
-  color: white;
-  border: none;
-  padding: 0.3rem 0.6rem;
-  border-radius: 0.3rem;
-  font-size: 0.8rem;
-  cursor: pointer;
-  margin-left: 0.5rem;
-  transition: background-color 0.2s ease, opacity 0.2s ease;
-  opacity: 0; /* Hidden by default */
-  pointer-events: none; /* Disable interaction when hidden */
-  transform: translateX(10px); /* Start slightly off to the right */
+/* Custom checkbox styling for tasks */
+.custom-checkbox {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #38bdf8;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    flex-shrink: 0; /* Prevent shrinking */
 }
 
-.checklist-item:hover .delete-task-btn {
-  opacity: 1; /* Show on hover */
-  pointer-events: auto; /* Enable interaction */
-  transform: translateX(0); /* Slide into view */
+.custom-checkbox.checked {
+    background-color: #38bdf8;
 }
 
-/* Notes Section within sidebar */
-.notes-section textarea {
-  width: 100%;
-  min-height: 120px;
-  padding: 0.75rem;
-  border: 1px solid #e2e8f0;
-  border-radius: 0.5rem;
-  resize: vertical;
-  font-size: 0.95rem;
-  outline: none; /* Remove default outline */
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+.custom-checkbox.checked i {
+    display: block;
 }
-.notes-section textarea:focus {
-  border-color: var(--accent-color);
-  box-shadow: 0 0 0 2px rgba(66, 153, 225, 0.5); /* Focus ring */
+
+.custom-checkbox i {
+    display: none;
+    color: white;
+    font-size: 12px;
 }
-.notes-section .btn-primary {
-  margin-top: 0.75rem;
-  display: block; /* Make button full width below textarea */
-  width: 100%;
+
+/* Task item styling */
+.task-item {
+    transition: all 0.3s ease;
+    display: flex; /* Ensure flex for alignment */
+    align-items: center; /* Vertically align items */
 }
-.notes-list {
-  margin-top: 1rem;
-  max-height: 250px;
-  overflow-y: auto;
-  border: 1px solid var(--light-gray);
-  border-radius: var(--border-radius);
-  padding: 0.75rem;
-  background-color: var(--card-bg);
-  box-shadow: inset 0 1px 3px rgba(0,0,0,0.05); /* Inner shadow for depth */
+
+.task-item.completed {
+    text-decoration: line-through; /* Strikethrough for completed tasks */
+    opacity: 0.7; /* Dim completed tasks */
 }
-.note-item {
-  background-color: #f0f4f8; /* Light blue-gray */
-  padding: 0.75rem;
-  border-radius: 0.5rem;
-  margin-bottom: 0.5rem;
-  word-wrap: break-word;
-  font-size: 0.9rem;
-  position: relative;
-  display: flex; /* Use flexbox for alignment */
-  justify-content: space-between; /* Space out content and button */
-  align-items: flex-start; /* Align content to the top if multi-line */
-  transition: background-color 0.2s ease;
+
+/* Note card styling */
+.note-card {
+    background: rgba(30, 41, 59, 0.8);
+    border-radius: 8px;
+    transition: all 0.3s ease;
 }
-.note-item:hover {
-    background-color: #e8edf4; /* Slightly darker on hover */
+
+.note-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px -5px rgba(59, 130, 246, 0.2);
 }
-.note-item span {
-    flex-grow: 1;
-    padding-right: 0.5rem; /* Space for delete button */
+
+/* Modal styling */
+.modal {
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    backdrop-filter: blur(5px); /* Blur effect for background */
 }
-.note-item .delete-note-btn {
-  background-color: #ef4444; /* Red-500 */
-  color: white;
-  padding: 0.2rem 0.5rem;
-  border-radius: 0.3rem;
-  font-size: 0.7rem;
-  cursor: pointer;
-  transition: background-color 0.2s;
-  flex-shrink: 0; /* Prevent button from shrinking */
+
+.modal-content {
+    background: #1e293b; /* Slate 800 */
+    border: 1px solid rgba(100, 116, 139, 0.3);
 }
-.note-item .delete-note-btn:hover {
-  background-color: #dc2626; /* Red-600 */
+
+/* Video card overlay and play icon styling */
+.video-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
 }
-.note-item:last-child {
-  margin-bottom: 0;
+
+.video-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); /* Dark overlay */
+    z-index: 1;
+}
+
+.video-card:hover::before {
+    background: rgba(0, 0, 0, 0.1); /* Lighter overlay on hover */
+}
+
+.video-card .play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    opacity: 0.9;
+    transition: all 0.3s ease;
+}
+
+.video-card:hover .play-icon {
+    transform: translate(-50%, -50%) scale(1.1); /* Enlarge play icon on hover */
+    opacity: 1;
 }
