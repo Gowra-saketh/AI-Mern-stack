@@ -1,165 +1,1184 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="A comprehensive, smarter roadmap to become a high-paying AI-Integrated MERN Stack Developer. Master MERN, integrate AI, and learn advanced cloud deployment for a future-proof career." />
-    <meta property="og:title" content="AI MERN Stack Developer: The Smarter Roadmap" />
-    <meta property="og:description" content="Unlock high-paying opportunities by combining MERN stack expertise with cutting-edge AI integration. Your guide to a future-proof tech career." />
-    <meta property="og:image" content="https://images.unsplash.com/photo-1542831371-d10be1dfd332?fit=crop&w=1200&h=630&q=80" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
-    <title>Smarter Roadmap for AI-Integrated MERN Stack Developer</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="icon" href="https://raw.githubusercontent.com/tailwindlabs/tailwindcss.com/master/public/favicons/favicon-32x32.png" type="image/png">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Full Stack MERN + AI Developer Roadmap</title>
+    <!-- Tailwind CSS CDN for utility-first styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <header class="container">
-        <nav>
-            <div class="logo">AI MERN Roadmap</div>
-            <div class="nav-links" role="navigation">
-                <span onclick="document.getElementById('hero').scrollIntoView({behavior:'smooth'});">Home</span>
-                <span onclick="document.getElementById('roadmap').scrollIntoView({behavior:'smooth'});">Roadmap</span>
-                <span onclick="openMyLearning()">My Learning</span>
-                <button class="btn-primary" onclick="document.getElementById('roadmap').scrollIntoView({behavior:'smooth'});">Get Started</button>
-            </div>
-            <div class="hamburger" onclick="toggleMenu()">☰</div>
-        </nav>
-    </header>
-    <main class="container">
-        <section id="hero" class="hero">
-            <h1>Smarter Roadmap for AI-Integrated MERN Stack Developer</h1>
-            <p>Combine cutting-edge AI technologies with MERN stack expertise to get high-paying jobs with minimized workload and maximum impact.</p>
-            <button class="btn-primary" onclick="document.getElementById('roadmap').scrollIntoView({behavior:'smooth'});">Explore the Roadmap</button>
-        </section>
+<body class="min-h-screen">
+    <!-- Placeholder for animated background elements (if any) -->
+    <div class="animated-bg"></div>
 
-        <section id="roadmap">
-            <h2 class="text-4xl font-extrabold text-center mb-12">Complete Smarter Roadmap & Selected Topics</h2>
-            <div class="cards-grid">
-                <article class="card">
-                    <h3>1. Foundations (0-3 Months)</h3>
-                    <p>Master basics with MERN fundamentals and AI prerequisites.</p>
-                    <ul>
-                        <li><strong>JavaScript (ES6+)</strong>: Async/await, closures, event loop.</li>
-                        <li><strong>HTML & CSS</strong>: Flexbox, Grid, responsive design.</li>
-                        <li><strong>Git & GitHub</strong>: Branching, pull requests, version control.</li>
-                        <li><strong>Python Basics</strong>: NumPy, Pandas for AI groundwork.</li>
-                    </ul>
-                </article>
-                <article class="card">
-                    <h3>2. Frontend Development (3-6 Months)</h3>
-                    <p>Build polished user interfaces with React & modern tools.</p>
-                    <ul>
-                        <li><strong>React.js:</strong> Functional components, hooks, Context API, React Router.</li>
-                        <li><strong>State Management:</strong> Redux fundamentals and toolkits for scalable apps.</li>
-                        <li><strong>UI/UX Basics:</strong> Accessibility (a11y), design systems, Tailwind CSS.</li>
-                        <li><strong>Vibe Coding:</strong> Utilize visual coding platforms to speed prototyping.</li>
-                    </ul>
-                </article>
-                <article class="card">
-                    <h3>3. Backend Development (6-9 Months)</h3>
-                    <p>Develop robust and secure server-side applications.</p>
-                    <ul>
-                        <li><strong>Node.js & Express.js:</strong> API design, middleware, authentication (JWT/OAuth).</li>
-                        <li><strong>Databases:</strong> MongoDB advanced CRUD, indexing, aggregation pipelines.</li>
-                        <li><strong>Security:</strong> OWASP top 10, HTTPS, CORS, helmet security.</li>
-                        <li><strong>Testing:</strong> Unit tests with Jest/Mocha, API testing (Postman).</li>
-                    </ul>
-                </article>
-                <article class="card">
-                    <h3>4. AI & Machine Learning Integration (9-12 Months)</h3>
-                    <p>Embed intelligent features with AI APIs and in-house ML models.</p>
-                    <ul>
-                        <li><strong>Key AI Concepts:</strong> Supervised/unsupervised learning, NLP basics.</li>
-                        <li><strong>AI APIs:</strong> OpenAI, Hugging Face transformers, Google Cloud AI APIs.</li>
-                        <li><strong>Python ML Libraries:</strong> scikit-learn, TensorFlow, PyTorch basics.</li>
-                        <li><strong>Project Ideas:</strong> Chatbots, recommendation engines, sentiment analysis.</li>
-                    </ul>
-                </article>
-                <article class="card">
-                    <h3>5. DevOps, Cloud & Deployment (12-15 Months)</h3>
-                    <p>Automate workflows, deploy applications and manage infrastructure.</p>
-                    <ul>
-                        <li><strong>Containerization:</strong> Docker basics and Docker Compose.</li>
-                        <li><strong>CI/CD Pipelines:</strong> GitHub Actions, Jenkins for automation.</li>
-                        <li><strong>Cloud Platforms:</strong> AWS, Google Cloud, or Azure for hosting backend & AI services.</li>
-                        <li><strong>Serverless:</strong> AWS Lambda or equivalent for scaling AI workloads.</li>
-                    </ul>
-                </article>
-                <article class="card">
-                    <h3>Resources</h3>
-                    <ul>
-                        <li>
-                            <strong>JavaScript:</strong>
-                            <ul>
-                                <li><a href="https://www.scaler.com/topics/course/javascript-beginners/" target="_blank">Scaler - JavaScript for Beginners</a></li>
-                                <li><a href="https://youtu.be/VlPiVmYuoqw?si=pB_kZZc5Gxv8VCFx" target="_blank">YouTube Tutorial</a></li>
-                            </ul>
-                            <strong>HTML:</strong>
-                            <ul>
-                                <li><a href="https://www.youtube.com/watch?v=HcOc7P5BMi4">YouTube Tutorial</a></li>
-                            </ul>
-                            <strong>CSS:</strong>
-                            <ul>
-                                <li><a href="https://www.youtube.com/watch?v=ESnrn1kAD4E">YouTube Tutorial</a></li>
-                            </ul>
-                            <strong>Python:</strong>
-                            <ul>
-                                <li><a href="https://www.scaler.com/topics/course/python-for-beginners/">Scaler - Python for Beginners</a></li>
-                                <li><a href="https://www.youtube.com/watch?v=t2_Q2BRzeEE&list=PLGjplNEQ1it8-0CmoljS5yeV-GlKSUEt0">YouTube Tutorial</a></li>
-                            </ul>
-                            <strong>React.js:</strong>
-                            <ul>
-                                <li><a href="https://www.scaler.com/topics/course/free-react-js-course/">Scaler - React.js</a></li>
-                            </ul>
+    <!-- Navigation Bar -->
+    <nav class="sticky top-0 z-50 backdrop-blur-lg bg-slate-900/80 border-b border-slate-800">
+        <div class="container mx-auto px-4 py-4 flex flex-col md:flex-row items-center justify-between">
+            <!-- Logo and Title -->
+            <div class="flex items-center mb-4 md:mb-0">
+                <div class="h-10 w-10 rounded-lg bg-gradient-to-br from-blue-400 to-indigo-500 flex items-center justify-center mr-3">
+                    <i class="fas fa-code text-white text-xl"></i>
+                </div>
+                <h1 class="text-xl font-bold">MERN<span class="gradient-text">+AI</span> Roadmap</h1>
+            </div>
+
+            <!-- Navigation Links -->
+            <div class="flex space-x-6 text-sm overflow-x-auto pb-2 md:pb-0 whitespace-nowrap">
+                <a href="#overview" class="nav-item py-2 active-nav">Overview</a>
+                <a href="#phases" class="nav-item py-2">Phases</a>
+                <a href="#skills" class="nav-item py-2">Skills</a>
+                <a href="#resources" class="nav-item py-2">Resources</a>
+                <a href="#notes" class="nav-item py-2">My Notes</a>
+                <a href="#tasks" class="nav-item py-2">My Tasks</a>
+                <a href="#bonus" class="nav-item py-2">Bonus</a>
+            </div>
+
+            <!-- Add Task Button (Desktop Only) -->
+            <div class="hidden md:flex items-center mt-4 md:mt-0">
+                <button id="openTaskModal" class="bg-gradient-to-r from-blue-500 to-indigo-500 text-white px-5 py-2 rounded-lg font-medium hover:shadow-lg hover:shadow-blue-500/30 transition duration-300">
+                    <i class="fas fa-plus mr-2"></i> Add Task
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="overview" class="py-16 md:py-24 relative overflow-hidden">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <!-- Hero Content -->
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6">
+                        Full Stack MERN + AI Developer Roadmap
+                    </h1>
+                    <h2 class="text-xl md:text-2xl text-slate-400 mb-8">
+                        Future-Proof + Industry Ready
+                    </h2>
+                    <p class="text-slate-300 mb-8 text-lg">
+                        A comprehensive learning path to master modern web development with MongoDB, Express, React, Node.js, and integrate cutting-edge AI capabilities.
+                    </p>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="px-4 py-2 bg-blue-500/10 text-blue-400 rounded-full border border-blue-500/20">
+                            <i class="fas fa-calendar-alt mr-2"></i> 25+ Weeks
+                        </span>
+                        <span class="px-4 py-2 bg-indigo-500/10 text-indigo-400 rounded-full border border-indigo-500/20">
+                            <i class="fas fa-project-diagram mr-2"></i> 10+ Projects
+                        </span>
+                        <span class="px-4 py-2 bg-purple-500/10 text-purple-400 rounded-full border border-purple-500/20">
+                            <i class="fas fa-brain mr-2"></i> AI Integration
+                        </span>
+                    </div>
+                </div>
+                <!-- Hero SVG Illustration (Hidden on smaller screens) -->
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative">
+                        <svg width="400" height="400" viewBox="0 0 400 400" class="hidden md:block">
+                            <circle cx="200" cy="200" r="150" fill="none" stroke="#1e40af" stroke-width="1" stroke-dasharray="5,5" />
+                            <circle cx="200" cy="200" r="120" fill="none" stroke="#3b82f6" stroke-width="1" stroke-dasharray="5,5" />
+                            <circle cx="200" cy="200" r="90" fill="none" stroke="#60a5fa" stroke-width="1" stroke-dasharray="5,5" />
+
+                            <!-- Frontend Node -->
+                            <g transform="translate(200, 80)">
+                                <circle cx="0" cy="0" r="25" fill="#1e40af" />
+                                <text x="0" y="5" text-anchor="middle" fill="white" font-size="12">Frontend</text>
+                            </g>
+
+                            <!-- Backend Node -->
+                            <g transform="translate(120, 250)">
+                                <circle cx="0" cy="0" r="25" fill="#3b82f6" />
+                                <text x="0" y="5" text-anchor="middle" fill="white" font-size="12">Backend</text>
+                            </g>
+
+                            <!-- Database Node -->
+                            <g transform="translate(280, 250)">
+                                <circle cx="0" cy="0" r="25" fill="#60a5fa" />
+                                <text x="0" y="5" text-anchor="middle" fill="white" font-size="12">Database</text>
+                            </g>
+
+                            <!-- AI Node -->
+                            <g transform="translate(200, 170)">
+                                <circle cx="0" cy="0" r="30" fill="#818cf8" />
+                                <text x="0" y="5" text-anchor="middle" fill="white" font-size="14">AI</text>
+                            </g>
+
+                            <!-- Connection lines -->
+                            <line x1="200" y1="105" x2="200" y2="140" stroke="#818cf8" stroke-width="2" />
+                            <line x1="175" y1="185" x2="135" y2="230" stroke="#818cf8" stroke-width="2" />
+                            <line x1="225" y1="185" x2="265" y2="230" stroke="#818cf8" stroke-width="2" />
+                            <line x1="145" y1="250" x2="255" y2="250" stroke="#818cf8" stroke-width="2" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Categories Section -->
+    <section id="skills" class="py-16 bg-slate-900/50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center">
+                <span class="gradient-text">Skill Categories</span> Overview
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Frontend Skills Card -->
+                <div class="card rounded-xl p-6 flex flex-col">
+                    <div class="flex items-center mb-6">
+                        <div class="h-12 w-12 rounded-lg bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center mr-4">
+                            <i class="fas fa-laptop-code text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Frontend Skills</h3>
+                    </div>
+
+                    <ul class="space-y-3 mb-6 flex-grow">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-blue-400 mr-3"></i>
+                            <span>HTML5, Semantic Tags</span>
                         </li>
-                        <strong>Node.js:</strong>
-                        <ul>
-                            <li><a href="https://www.scaler.com/topics/course/nodejs/">Scaler - Node.js</a></li>
-                        </ul>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-blue-400 mr-3"></i>
+                            <span>CSS3, Flexbox, Grid, Media Queries</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-blue-400 mr-3"></i>
+                            <span>Bootstrap, Tailwind CSS</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-blue-400 mr-3"></i>
+                            <span>JavaScript (ES6+)</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-blue-400 mr-3"></i>
+                            <span>DOM Manipulation</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-blue-400 mr-3"></i>
+                            <span>Asynchronous JS: Callbacks, Promises, Async/Await</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-blue-400 mr-3"></i>
+                            <span>API Integration (AJAX, Fetch)</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-blue-400 mr-3"></i>
+                            <span>React.js, JSX, Props, State, Hooks</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-blue-400 mr-3"></i>
+                            <span>Redux / Redux Toolkit</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-blue-400 mr-3"></i>
+                            <span>Responsive & Accessible Design</span>
+                        </li>
                     </ul>
-                </article>
-            </div>
-        </section>
-    </main>
 
-    <div id="myLearningSidebar" class="my-learning-sidebar">
-        <span class="my-learning-sidebar-close" onclick="closeMyLearning()">×</span>
+                    <div class="mt-auto">
+                        <div class="flex justify-between text-sm text-slate-400 mb-2">
+                            <span>Mastery Level</span>
+                            <span>Advanced</span>
+                        </div>
+                        <div class="w-full bg-slate-700 rounded-full h-1.5">
+                            <div class="progress-bar" style="width: 85%"></div>
+                        </div>
+                    </div>
+                </div>
 
-        <div class="my-learning-section">
-            <h2 class="text-3xl font-extrabold mb-4">Study Timer</h2>
-            <div class="timer" id="timer">00:00:00</div>
-            <div class="timer-controls flex justify-center">
-                <button class="btn-primary" onclick="startTimer()">Start</button>
-                <button class="btn-primary" onclick="stopTimer()">Stop</button>
-                <button class="btn-primary" onclick="resetTimer()">Reset</button>
+                <!-- Backend Skills Card -->
+                <div class="card rounded-xl p-6 flex flex-col">
+                    <div class="flex items-center mb-6">
+                        <div class="h-12 w-12 rounded-lg bg-gradient-to-br from-indigo-400 to-indigo-600 flex items-center justify-center mr-4">
+                            <i class="fas fa-server text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Backend Skills</h3>
+                    </div>
+
+                    <ul class="space-y-3 mb-6 flex-grow">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-indigo-400 mr-3"></i>
+                            <span>Node.js (fs, path, http modules)</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-indigo-400 mr-3"></i>
+                            <span>Express.js (Middleware, Routing)</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-indigo-400 mr-3"></i>
+                            <span>RESTful API Development</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-indigo-400 mr-3"></i>
+                            <span>MVC Architecture</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-indigo-400 mr-3"></i>
+                            <span>MongoDB, Mongoose ODM</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-indigo-400 mr-3"></i>
+                            <span>Authentication (JWT, Cookies)</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-indigo-400 mr-3"></i>
+                            <span>Error Handling & Validation</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-indigo-400 mr-3"></i>
+                            <span>Deployment & Hosting</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-indigo-400 mr-3"></i>
+                            <span>Version Control with Git & GitHub</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-indigo-400 mr-3"></i>
+                            <span>Command Line Proficiency</span>
+                        </li>
+                    </ul>
+
+                    <div class="mt-auto">
+                        <div class="flex justify-between text-sm text-slate-400 mb-2">
+                            <span>Mastery Level</span>
+                            <span>Intermediate</span>
+                        </div>
+                        <div class="w-full bg-slate-700 rounded-full h-1.5">
+                            <div class="progress-bar" style="width: 75%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI Integration Skills Card -->
+                <div class="card rounded-xl p-6 flex flex-col">
+                    <div class="flex items-center mb-6">
+                        <div class="h-12 w-12 rounded-lg bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center mr-4">
+                            <i class="fas fa-brain text-white text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold">Python + AI Skills</h3>
+                    </div>
+
+                    <ul class="space-y-3 mb-6 flex-grow">
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-purple-400 mr-3"></i>
+                            <span>Python Programming Basics</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-purple-400 mr-3"></i>
+                            <span>NumPy, Pandas for data handling</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-purple-400 mr-3"></i>
+                            <span>Scikit-learn for ML models</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-purple-400 mr-3"></i>
+                            <span>Flask or FastAPI for Python-based APIs</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-purple-400 mr-3"></i>
+                            <span>Model Integration with MERN via REST</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-purple-400 mr-3"></i>
+                            <span>AI Use Cases: Chatbots, Recommendation Systems</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-purple-400 mr-3"></i>
+                            <span>Data Visualization: Matplotlib, Seaborn</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-check-circle text-purple-400 mr-3"></i>
+                            <span>Hosting AI services alongside MERN apps</span>
+                        </li>
+                    </ul>
+
+                    <div class="mt-auto">
+                        <div class="flex justify-between text-sm text-slate-400 mb-2">
+                            <span>Mastery Level</span>
+                            <span>Future-Ready</span>
+                        </div>
+                        <div class="w-full bg-slate-700 rounded-full h-1.5">
+                            <div class="progress-bar" style="width: 65%"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+    </section>
 
-        <div class="my-learning-section">
-            <h2 class="text-3xl font-extrabold mb-4">Daily Tasks</h2>
-            <div id="dailyTasksList"></div>
-            <form class="add-task-form" onsubmit="addTask(event)">
-                <input type="text" id="newTaskInput" placeholder="Add a new task..." class="flex-grow" aria-label="Add a new task" />
-                <button type="submit" class="btn-primary">Add Task</button>
+    <!-- Learning Phases Section -->
+    <section id="phases" class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center">
+                Learning <span class="gradient-text">Phases</span>
+            </h2>
+
+            <div class="space-y-6" id="phasesContainer">
+                <!-- Phase 1 -->
+                <div class="phase-card bg-slate-800/50 rounded-lg p-6">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                        <div>
+                            <span class="text-xs font-semibold bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full">Phase 1</span>
+                            <h3 class="text-xl font-semibold mt-2">Web Development Foundations</h3>
+                        </div>
+                        <span class="text-slate-400 text-sm mt-2 md:mt-0">Weeks 1-3</span>
+                    </div>
+
+                    <p class="text-slate-300 mb-4">
+                        Master the core building blocks of web development with HTML, CSS, and basic design principles.
+                    </p>
+
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="skill-pill text-xs px-3 py-1 rounded-full">HTML5</span>
+                        <span class="skill-pill text-xs px-3 py-1 rounded-full">CSS3</span>
+                        <span class="skill-pill text-xs px-3 py-1 rounded-full">Flexbox</span>
+                        <span class="skill-pill text-xs px-3 py-1 rounded-full">Grid</span>
+                        <span class="skill-pill text-xs px-3 py-1 rounded-full">Responsive Design</span>
+                    </div>
+
+                    <div class="flex items-center mt-4">
+                        <div class="h-10 w-10 rounded-lg bg-blue-500/20 flex items-center justify-center mr-3">
+                            <i class="fas fa-laptop-code text-blue-400"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-medium">Project</h4>
+                            <p class="text-slate-400 text-sm">Personal Portfolio Website</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phase 2 -->
+                <div class="phase-card bg-slate-800/50 rounded-lg p-6">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                        <div>
+                            <span class="text-xs font-semibold bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full">Phase 2</span>
+                            <h3 class="text-xl font-semibold mt-2">JavaScript Essentials</h3>
+                        </div>
+                        <span class="text-slate-400 text-sm mt-2 md:mt-0">Weeks 4-6</span>
+                    </div>
+
+                    <p class="text-slate-300 mb-4">
+                        Learn modern JavaScript (ES6+) and DOM manipulation to create interactive web experiences.
+                    </p>
+
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="skill-pill text-xs px-3 py-1 rounded-full">JavaScript ES6+</span>
+                        <span class="skill-pill text-xs px-3 py-1 rounded-full">DOM Manipulation</span>
+                        <span class="skill-pill text-xs px-3 py-1 rounded-full">Events</span>
+                        <span class="skill-pill text-xs px-3 py-1 rounded-full">Functions</span>
+                        <span class="skill-pill text-xs px-3 py-1 rounded-full">Objects</span>
+                    </div>
+
+                    <div class="flex items-center mt-4">
+                        <div class="h-10 w-10 rounded-lg bg-blue-500/20 flex items-center justify-center mr-3">
+                            <i class="fas fa-code text-blue-400"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-medium">Project</h4>
+                            <p class="text-slate-400 text-sm">Interactive Form + JS Mini Games</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phase 3 -->
+                <div class="phase-card bg-slate-800/50 rounded-lg p-6">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                        <div>
+                            <span class="text-xs font-semibold bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full">Phase 3</span>
+                            <h3 class="text-xl font-semibold mt-2">Asynchronous JavaScript & APIs</h3>
+                        </div>
+                        <span class="text-slate-400 text-sm mt-2 md:mt-0">Weeks 7-8</span>
+                    </div>
+
+                    <p class="text-slate-300 mb-4">
+                        Master asynchronous programming and learn to fetch data from external APIs.
+                    </p>
+
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="skill-pill text-xs px-3 py-1 rounded-full">Promises</span>
+                        <span class="skill-pill text-xs px-3 py-1 rounded-full">Async/Await</span>
+                        <span class="skill-pill text-xs px-3 py-1 rounded-full">Fetch API</span>
+                        <span class="skill-pill text-xs px-3 py-1 rounded-full">JSON</span>
+                        <span class="skill-pill text-xs px-3 py-1 rounded-full">Error Handling</span>
+                    </div>
+
+                    <div class="flex items-center mt-4">
+                        <div class="h-10 w-10 rounded-lg bg-blue-500/20 flex items-center justify-center mr-3">
+                            <i class="fas fa-cloud-download-alt text-blue-400"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-medium">Project</h4>
+                            <p class="text-slate-400 text-sm">Weather App / Quote Generator</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phase 4 -->
+                <div class="phase-card bg-slate-800/50 rounded-lg p-6 hidden-phase">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                        <div>
+                            <span class="text-xs font-semibold bg-indigo-500/20 text-indigo-400 px-3 py-1 rounded-full">Phase 4</span>
+                            <h3 class="text-xl font-semibold mt-2">Version Control & Workflow</h3>
+                        </div>
+                        <span class="text-slate-400 text-sm mt-2 md:mt-0">Weeks 9-10</span>
+                    </div>
+
+                    <p class="text-slate-300 mb-4">
+                        Understand Git and GitHub for collaborative development and efficient workflow.
+                    </p>
+
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="skill-pill text-xs px-3 py-1 rounded-full">Git</span>
+                        <span class="skill-pill text-xs px-3 py-1 rounded-full">GitHub</span>
+                        <span class="skill-pill text-xs px-3 py-1 rounded-full">Branching</span>
+                        <span class="skill-pill text-xs px-3 py-1 rounded-full">Pull Requests</span>
+                        <span class="skill-pill text-xs px-3 py-1 rounded-full">Forking</span>
+                    </div>
+
+                    <div class="flex items-center mt-4">
+                        <div class="h-10 w-10 rounded-lg bg-indigo-500/20 flex items-center justify-center mr-3">
+                            <i class="fas fa-code-branch text-indigo-400"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-medium">Project</h4>
+                            <p class="text-slate-400 text-sm">Collaborative Documentation Site</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phase 5 -->
+                <div class="phase-card bg-slate-800/50 rounded-lg p-6">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                        <div>
+                            <span class="text-xs font-semibold bg-indigo-500/20 text-indigo-400 px-3 py-1 rounded-full">Phase 5</span>
+                            <h3 class="text-xl font-semibold mt-2">Backend with Node.js & Express</h3>
+                        </div>
+                        <span class="text-slate-400 text-sm mt-2 md:mt-0">Weeks 11-13</span>
+                    </div>
+
+                    <p class="text-slate-300 mb-4">
+                        Build server-side applications with Node.js and create RESTful APIs with Express.
+                    </p>
+
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="skill-pill text-xs px-3 py-1 rounded-full">Node.js</span>
+                        <span class="skill-pill text-xs px-3 py-1 rounded-full">Express.js</span>
+                        <span class="skill-pill text-xs px-3 py-1 rounded-full">Middleware</span>
+                        <span class="skill-pill text-xs px-3 py-1 rounded-full">REST APIs</span>
+                        <span class="skill-pill text-xs px-3 py-1 rounded-full">MVC Pattern</span>
+                    </div>
+
+                    <div class="flex items-center mt-4">
+                        <div class="h-10 w-10 rounded-lg bg-indigo-500/20 flex items-center justify-center mr-3">
+                            <i class="fas fa-server text-indigo-400"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-medium">Project</h4>
+                            <p class="text-slate-400 text-sm">Blog API with Auth + Validation</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phase 6 -->
+                <div class="phase-card bg-slate-800/50 rounded-lg p-6 hidden-phase">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                        <div>
+                            <span class="text-xs font-semibold bg-indigo-500/20 text-indigo-400 px-3 py-1 rounded-full">Phase 6</span>
+                            <h3 class="text-xl font-semibold mt-2">MongoDB & Database Logic</h3>
+                        </div>
+                        <span class="text-slate-400 text-sm mt-2 md:mt-0">Weeks 14-15</span>
+                    </div>
+
+                    <p class="text-slate-300 mb-4">
+                        Work with NoSQL databases, specifically MongoDB, and integrate with Node.js using Mongoose.
+                    </p>
+
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="skill-pill text-xs px-3 py-1 rounded-full">MongoDB</span>
+                        <span class="skill-pill text-xs px-3 py-1 rounded-full">Mongoose ODM</span>
+                        <span class="skill-pill text-xs px-3 py-1 rounded-full">Database Schemas</span>
+                        <span class="skill-pill text-xs px-3 py-1 rounded-full">CRUD Operations</span>
+                        <span class="skill-pill text-xs px-3 py-1 rounded-full">Data Modeling</span>
+                    </div>
+
+                    <div class="flex items-center mt-4">
+                        <div class="h-10 w-10 rounded-lg bg-indigo-500/20 flex items-center justify-center mr-3">
+                            <i class="fas fa-database text-indigo-400"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-medium">Project</h4>
+                            <p class="text-slate-400 text-sm">E-commerce Backend API</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phase 7 -->
+                <div class="phase-card bg-slate-800/50 rounded-lg p-6">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                        <div>
+                            <span class="text-xs font-semibold bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full">Phase 7</span>
+                            <h3 class="text-xl font-semibold mt-2">React.js Frontend</h3>
+                        </div>
+                        <span class="text-slate-400 text-sm mt-2 md:mt-0">Weeks 16-18</span>
+                    </div>
+
+                    <p class="text-slate-300 mb-4">
+                        Master React.js to build dynamic, component-based user interfaces.
+                    </p>
+
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="skill-pill text-xs px-3 py-1 rounded-full">React Components</span>
+                        <span class="skill-pill text-xs px-3 py-1 rounded-full">JSX</span>
+                        <span class="skill-pill text-xs px-3 py-1 rounded-full">Hooks</span>
+                        <span class="skill-pill text-xs px-3 py-1 rounded-full">State Management</span>
+                        <span class="skill-pill text-xs px-3 py-1 rounded-full">React Router</span>
+                    </div>
+
+                    <div class="flex items-center mt-4">
+                        <div class="h-10 w-10 rounded-lg bg-blue-500/20 flex items-center justify-center mr-3">
+                            <i class="fab fa-react text-blue-400"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-medium">Project</h4>
+                            <p class="text-slate-400 text-sm">Task Manager / Shopping Cart App</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phase 8 -->
+                <div class="phase-card bg-slate-800/50 rounded-lg p-6 hidden-phase">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                        <div>
+                            <span class="text-xs font-semibold bg-blue-500/20 text-blue-400 px-3 py-1 rounded-full">Phase 8</span>
+                            <h3 class="text-xl font-semibold mt-2">Full MERN Stack Integration</h3>
+                        </div>
+                        <span class="text-slate-400 text-sm mt-2 md:mt-0">Weeks 19-21</span>
+                    </div>
+
+                    <p class="text-slate-300 mb-4">
+                        Combine all MERN components to build complete, functional web applications.
+                    </p>
+
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="skill-pill text-xs px-3 py-1 rounded-full">MERN Stack</span>
+                        <span class="skill-pill text-xs px-3 py-1 rounded-full">API Integration</span>
+                        <span class="skill-pill text-xs px-3 py-1 rounded-full">User Authentication</span>
+                        <span class="skill-pill text-xs px-3 py-1 rounded-full">State Management</span>
+                        <span class="skill-pill text-xs px-3 py-1 rounded-full">Deployment Strategies</span>
+                    </div>
+
+                    <div class="flex items-center mt-4">
+                        <div class="h-10 w-10 rounded-lg bg-blue-500/20 flex items-center justify-center mr-3">
+                            <i class="fas fa-cogs text-blue-400"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-medium">Project</h4>
+                            <p class="text-slate-400 text-sm">Social Media Clone</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phase 9 -->
+                <div class="phase-card bg-slate-800/50 rounded-lg p-6 hidden-phase">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                        <div>
+                            <span class="text-xs font-semibold bg-indigo-500/20 text-indigo-400 px-3 py-1 rounded-full">Phase 9</span>
+                            <h3 class="text-xl font-semibold mt-2">Hosting, Auth & DevOps Basics</h3>
+                        </div>
+                        <span class="text-slate-400 text-sm mt-2 md:mt-0">Weeks 22-23</span>
+                    </div>
+
+                    <p class="text-slate-300 mb-4">
+                        Deploy your MERN applications and implement advanced authentication and DevOps practices.
+                    </p>
+
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="skill-pill text-xs px-3 py-1 rounded-full">Deployment</span>
+                        <span class="skill-pill text-xs px-3 py-1 rounded-full">Vercel/Render</span>
+                        <span class="skill-pill text-xs px-3 py-1 rounded-full">JWT Auth</span>
+                        <span class="skill-pill text-xs px-3 py-1 rounded-full">CI/CD</span>
+                        <span class="skill-pill text-xs px-3 py-1 rounded-full">Environment Variables</span>
+                    </div>
+
+                    <div class="flex items-center mt-4">
+                        <div class="h-10 w-10 rounded-lg bg-indigo-500/20 flex items-center justify-center mr-3">
+                            <i class="fas fa-cloud-upload-alt text-indigo-400"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-medium">Project</h4>
+                            <p class="text-slate-400 text-sm">Personal Portfolio Deployment</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Phase 10 - AI Integration -->
+                <div class="phase-card bg-slate-800/50 rounded-lg p-6 border-purple-500">
+                    <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                        <div>
+                            <span class="text-xs font-semibold bg-purple-500/20 text-purple-400 px-3 py-1 rounded-full">Phase 10</span>
+                            <h3 class="text-xl font-semibold mt-2">Python + AI Integration</h3>
+                        </div>
+                        <span class="text-slate-400 text-sm mt-2 md:mt-0">Weeks 24-25</span>
+                    </div>
+
+                    <p class="text-slate-300 mb-4">
+                        Learn to integrate AI capabilities into your full stack applications using Python.
+                    </p>
+
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="skill-pill text-xs px-3 py-1 rounded-full">Python</span>
+                        <span class="skill-pill text-xs px-3 py-1 rounded-full">NumPy</span>
+                        <span class="skill-pill text-xs px-3 py-1 rounded-full">Pandas</span>
+                        <span class="skill-pill text-xs px-3 py-1 rounded-full">Scikit-learn</span>
+                        <span class="skill-pill text-xs px-3 py-1 rounded-full">Flask/FastAPI</span>
+                        <span class="skill-pill text-xs px-3 py-1 rounded-full">ML Integration</span>
+                    </div>
+
+                    <div class="flex items-center mt-4">
+                        <div class="h-10 w-10 rounded-lg bg-purple-500/20 flex items-center justify-center mr-3">
+                            <i class="fas fa-brain text-purple-400"></i>
+                        </div>
+                        <div>
+                            <h4 class="font-medium">Project</h4>
+                            <p class="text-slate-400 text-sm">Smart MERN + AI App (Movie Recommender)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex justify-center mt-8">
+                    <button id="togglePhasesBtn" class="bg-slate-700 hover:bg-slate-600 text-white px-5 py-2 rounded-lg font-medium transition duration-300">
+                        Show All Phases <i class="fas fa-chevron-down ml-2"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section id="resources" class="py-16 bg-slate-900/50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center">
+                Learning <span class="gradient-text">Resources</span>
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- JavaScript Resource Card -->
+                <div class="resource-card bg-slate-800/70 rounded-xl overflow-hidden">
+                    <div class="h-40 bg-gradient-to-r from-blue-500 to-indigo-600 relative">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="fab fa-js text-white text-6xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3">JavaScript for Beginners</h3>
+                        <p class="text-slate-300 mb-4">
+                            Master JavaScript fundamentals with hands-on exercises and projects.
+                        </p>
+                        <div class="flex items-center text-sm text-slate-400 mb-4">
+                            <span class="flex items-center mr-4">
+                                <i class="fas fa-book mr-2"></i> 12 Modules
+                            </span>
+                            <span class="flex items-center">
+                                <i class="fas fa-clock mr-2"></i> 20+ Hours
+                            </span>
+                        </div>
+                        <a href="https://www.scaler.com/topics/course/javascript-beginners/" target="_blank" class="block text-center bg-gradient-to-r from-blue-500 to-indigo-500 text-white px-4 py-2 rounded-lg font-medium hover:shadow-lg hover:shadow-blue-500/30 transition duration-300">
+                            Start Learning
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Python Resource Card -->
+                <div class="resource-card bg-slate-800/70 rounded-xl overflow-hidden">
+                    <div class="h-40 bg-gradient-to-r from-purple-500 to-indigo-600 relative">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="fab fa-python text-white text-6xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3">Python for Beginners</h3>
+                        <p class="text-slate-300 mb-4">
+                            Learn Python programming from scratch with practical examples.
+                        </p>
+                        <div class="flex items-center text-sm text-slate-400 mb-4">
+                            <span class="flex items-center mr-4">
+                                <i class="fas fa-book mr-2"></i> 10 Modules
+                            </span>
+                            <span class="flex items-center">
+                                <i class="fas fa-clock mr-2"></i> 15+ Hours
+                            </span>
+                        </div>
+                        <a href="https://www.scaler.com/topics/course/python-for-beginners/" target="_blank" class="block text-center bg-gradient-to-r from-purple-500 to-indigo-500 text-white px-4 py-2 rounded-lg font-medium hover:shadow-lg hover:shadow-purple-500/30 transition duration-300">
+                            Start Learning
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Node.js Resource Card -->
+                <div class="resource-card bg-slate-800/70 rounded-xl overflow-hidden">
+                    <div class="h-40 bg-gradient-to-r from-green-500 to-teal-600 relative">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="fab fa-node-js text-white text-6xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3">Node.js Course</h3>
+                        <p class="text-slate-300 mb-4">
+                            Build server-side applications with Node.js and Express.
+                        </p>
+                        <div class="flex items-center text-sm text-slate-400 mb-4">
+                            <span class="flex items-center mr-4">
+                                <i class="fas fa-book mr-2"></i> 8 Modules
+                            </span>
+                            <span class="flex items-center">
+                                <i class="fas fa-clock mr-2"></i> 18+ Hours
+                            </span>
+                        </div>
+                        <a href="https://www.scaler.com/topics/course/nodejs/" target="_blank" class="block text-center bg-gradient-to-r from-green-500 to-teal-500 text-white px-4 py-2 rounded-lg font-medium hover:shadow-lg hover:shadow-green-500/30 transition duration-300">
+                            Start Learning
+                        </a>
+                    </div>
+                </div>
+
+                <!-- React.js Resource Card -->
+                <div class="resource-card bg-slate-800/70 rounded-xl overflow-hidden">
+                    <div class="h-40 bg-gradient-to-r from-cyan-500 to-blue-600 relative">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="fab fa-react text-white text-6xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-3">Free React.js Course</h3>
+                        <p class="text-slate-300 mb-4">
+                            Learn React.js from scratch and build modern web applications.
+                        </p>
+                        <div class="flex items-center text-sm text-slate-400 mb-4">
+                            <span class="flex items-center mr-4">
+                                <i class="fas fa-book mr-2"></i> 10 Modules
+                            </span>
+                            <span class="flex items-center">
+                                <i class="fas fa-clock mr-2"></i> 15+ Hours
+                            </span>
+                        </div>
+                        <a href="https://www.scaler.com/topics/course/free-react-js-course/" target="_blank" class="block text-center bg-gradient-to-r from-cyan-500 to-blue-500 text-white px-4 py-2 rounded-lg font-medium hover:shadow-lg hover:shadow-cyan-500/30 transition duration-300">
+                            Start Learning
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="text-2xl font-bold mt-16 mb-8 text-center">
+                Recommended <span class="gradient-text">Video Tutorials</span>
+            </h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Video 1 Card -->
+                <div class="resource-card bg-slate-800/70 rounded-xl overflow-hidden">
+                    <div class="video-card h-48 bg-slate-700 relative">
+                        <img src="https://i.ytimg.com/vi/HcOc7P5BMi4/maxresdefault.jpg" alt="React Tutorial" class="w-full h-full object-cover" onerror="this.onerror=null;this.src='https://placehold.co/640x360/1e293b/e2e8f0?text=Video+Placeholder';">
+                        <div class="play-icon h-12 w-12 rounded-full bg-white/90 flex items-center justify-center">
+                            <i class="fas fa-play text-slate-900 text-lg"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold mb-3">React JS Course for Beginners</h3>
+                        <p class="text-slate-300 mb-4">
+                            Learn React JS from scratch in this comprehensive tutorial.
+                        </p>
+                        <a href="https://www.youtube.com/watch?v=HcOc7P5BMi4" target="_blank" class="block text-center bg-red-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-red-700 transition duration-300">
+                            <i class="fab fa-youtube mr-2"></i> Watch on YouTube
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Video 2 Card -->
+                <div class="resource-card bg-slate-800/70 rounded-xl overflow-hidden">
+                    <div class="video-card h-48 bg-slate-700 relative">
+                        <img src="https://i.ytimg.com/vi/ESnrn1kAD4E/maxresdefault.jpg" alt="MERN Stack Tutorial" class="w-full h-full object-cover" onerror="this.onerror=null;this.src='https://placehold.co/640x360/1e293b/e2e8f0?text=Video+Placeholder';">
+                        <div class="play-icon h-12 w-12 rounded-full bg-white/90 flex items-center justify-center">
+                            <i class="fas fa-play text-slate-900 text-lg"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold mb-3">MERN Stack Tutorial</h3>
+                        <p class="text-slate-300 mb-4">
+                            Build a complete MERN stack application from scratch.
+                        </p>
+                        <a href="https://youtu.be/ESnrn1kAD4E?si=Ht7aLFSLEJffrBr7" target="_blank" class="block text-center bg-red-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-red-700 transition duration-300">
+                            <i class="fab fa-youtube mr-2"></i> Watch on YouTube
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Video 3 Card -->
+                <div class="resource-card bg-slate-800/70 rounded-xl overflow-hidden">
+                    <div class="video-card h-48 bg-slate-700 relative">
+                        <img src="https://i.ytimg.com/vi/VlPiVmYuoqw/maxresdefault.jpg" alt="AI Integration Tutorial" class="w-full h-full object-cover" onerror="this.onerror=null;this.src='https://placehold.co/640x360/1e293b/e2e8f0?text=Video+Placeholder';">
+                        <div class="play-icon h-12 w-12 rounded-full bg-white/90 flex items-center justify-center">
+                            <i class="fas fa-play text-slate-900 text-lg"></i>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-lg font-semibold mb-3">AI Integration with Web Apps</h3>
+                        <p class="text-slate-300 mb-4">
+                            Learn how to integrate AI capabilities into your web applications.
+                        </p>
+                        <a href="https://youtu.be/VlPiVmYuoqw?si=1ul4_qqaCKayV9YX" target="_blank" class="block text-center bg-red-600 text-white px-4 py-2 rounded-lg font-medium hover:bg-red-700 transition duration-300">
+                            <i class="fab fa-youtube mr-2"></i> Watch on YouTube
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center">
+                <a href="https://www.scaler.com/topics/" target="_blank" class="inline-flex items-center text-blue-400 hover:text-blue-300 transition duration-300">
+                    Explore more resources on Scaler Topics
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- My Notes Section -->
+    <section id="notes" class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-12">
+                <h2 class="text-3xl font-bold">
+                    My <span class="gradient-text">Notes</span>
+                </h2>
+                <button id="openNoteModalBtn" class="mt-4 md:mt-0 bg-gradient-to-r from-blue-500 to-indigo-500 text-white px-5 py-2 rounded-lg font-medium hover:shadow-lg hover:shadow-blue-500/30 transition duration-300">
+                    <i class="fas fa-plus mr-2"></i> Add New Note
+                </button>
+            </div>
+
+            <div id="notesContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Notes will be loaded here dynamically by JavaScript -->
+            </div>
+
+            <div id="emptyNotes" class="hidden text-center py-12">
+                <div class="h-24 w-24 mx-auto mb-6 rounded-full bg-slate-800 flex items-center justify-center">
+                    <i class="fas fa-sticky-note text-slate-600 text-4xl"></i>
+                </div>
+                <h3 class="text-xl font-semibold mb-2">No Notes Yet</h3>
+                <p class="text-slate-400 mb-6">Add your first note to keep track of important concepts.</p>
+                <button id="emptyAddNoteBtn" class="bg-gradient-to-r from-blue-500 to-indigo-500 text-white px-5 py-2 rounded-lg font-medium hover:shadow-lg hover:shadow-blue-500/30 transition duration-300">
+                    <i class="fas fa-plus mr-2"></i> Add New Note
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- My Tasks Section -->
+    <section id="tasks" class="py-16 bg-slate-900/50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-12">
+                <h2 class="text-3xl font-bold">
+                    My <span class="gradient-text">Tasks</span>
+                </h2>
+                <button id="openTaskModalForNewBtn" class="mt-4 md:mt-0 bg-gradient-to-r from-green-500 to-teal-500 text-white px-5 py-2 rounded-lg font-medium hover:shadow-lg hover:shadow-green-500/30 transition duration-300">
+                    <i class="fas fa-plus mr-2"></i> Add New Task
+                </button>
+            </div>
+
+            <div class="card rounded-xl p-6">
+                <div class="flex items-center mb-6">
+                    <div class="h-12 w-12 rounded-lg bg-gradient-to-br from-green-400 to-teal-600 flex items-center justify-center mr-4">
+                        <i class="fas fa-tasks text-white text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold">Learning Tasks</h3>
+                </div>
+
+                <div class="mb-6">
+                    <div class="relative">
+                        <input type="text" id="mainTaskInput" placeholder="Add a new task..." class="w-full bg-slate-800 border border-slate-700 rounded-lg py-3 px-4 pr-12 text-white placeholder-slate-500 focus:outline-none focus:border-green-500">
+                        <button id="addTaskBtn" class="absolute right-2 top-1/2 transform -translate-y-1/2 h-8 w-8 rounded-full bg-green-500 flex items-center justify-center hover:bg-green-600 transition duration-300">
+                            <i class="fas fa-plus text-white"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div id="taskList" class="space-y-3">
+                    <!-- Tasks will be loaded here dynamically by JavaScript -->
+                </div>
+
+                <div class="mt-6 pt-6 border-t border-slate-700 flex justify-between items-center">
+                    <div class="text-sm text-slate-400">
+                        <span id="completedTasksCount">0</span> of <span id="totalTasksCount">0</span> tasks completed
+                    </div>
+                    <button id="clearCompletedBtn" class="text-sm text-slate-400 hover:text-green-400 transition-colors">
+                        Clear completed
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industry Skills Checklist -->
+    <section id="bonus" class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-12 text-center">
+                Industry <span class="gradient-text">Skills</span> Checklist
+            </h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="card rounded-xl p-6">
+                    <h3 class="text-xl font-semibold mb-6 flex items-center">
+                        <i class="fas fa-briefcase text-blue-400 mr-3"></i>
+                        Core Skills
+                    </h3>
+
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <div class="h-6 w-6 rounded bg-blue-500/20 flex items-center justify-center mr-3 mt-0.5">
+                                <i class="fas fa-check text-blue-400 text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">Git + GitHub Workflow</h4>
+                                <p class="text-slate-400 text-sm">Version control, branching, pull requests, collaboration</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="h-6 w-6 rounded bg-blue-500/20 flex items-center justify-center mr-3 mt-0.5">
+                                <i class="fas fa-check text-blue-400 text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">REST API Handling</h4>
+                                <p class="text-slate-400 text-sm">Creating and consuming RESTful APIs</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="h-6 w-6 rounded bg-blue-500/20 flex items-center justify-center mr-3 mt-0.5">
+                                <i class="fas fa-check text-blue-400 text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">Authentication & JWT</h4>
+                                <p class="text-slate-400 text-sm">Secure user authentication and authorization</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="h-6 w-6 rounded bg-blue-500/20 flex items-center justify-center mr-3 mt-0.5">
+                                <i class="fas fa-check text-blue-400 text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">Deployment</h4>
+                                <p class="text-slate-400 text-sm">Vercel, Render, Netlify, and other hosting platforms</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="h-6 w-6 rounded bg-blue-500/20 flex items-center justify-center mr-3 mt-0.5">
+                                <i class="fas fa-check text-blue-400 text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">Mobile Responsive UI</h4>
+                                <p class="text-slate-400 text-sm">Designing interfaces that work across all devices</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="card rounded-xl p-6">
+                    <h3 class="text-xl font-semibold mb-6 flex items-center">
+                        <i class="fas fa-rocket text-indigo-400 mr-3"></i>
+                        Future-Proof Add-ons
+                    </h3>
+
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <div class="h-6 w-6 rounded bg-indigo-500/20 flex items-center justify-center mr-3 mt-0.5">
+                                <i class="fas fa-plus text-indigo-400 text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">TypeScript</h4>
+                                <p class="text-slate-400 text-sm">Type safety for large applications</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="h-6 w-6 rounded bg-indigo-500/20 flex items-center justify-center mr-3 mt-0.5">
+                                <i class="fas fa-plus text-indigo-400 text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">Testing</h4>
+                                <p class="text-slate-400 text-sm">Jest, Cypress, React Testing Library</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="h-6 w-6 rounded bg-indigo-500/20 flex items-center justify-center mr-3 mt-0.5">
+                                <i class="fas fa-plus text-indigo-400 text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">CI/CD Pipelines</h4>
+                                <p class="text-slate-400 text-sm">GitHub Actions, Docker for continuous integration</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="h-6 w-6 rounded bg-indigo-500/20 flex items-center justify-center mr-3 mt-0.5">
+                                <i class="fas fa-plus text-indigo-400 text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">Server-Side Rendering</h4>
+                                <p class="text-slate-400 text-sm">Next.js for improved performance and SEO</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="h-6 w-6 rounded bg-indigo-500/20 flex items-center justify-center mr-3 mt-0.5">
+                                <i class="fas fa-plus text-indigo-400 text-sm"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium">AI Advancements</h4>
+                                <p class="text-slate-400 text-sm">LangChain, LLM APIs, Vector Databases</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="py-16 bg-gradient-to-r from-blue-900 to-indigo-900">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-6">Ready to Become a Full Stack MERN + AI Developer?</h2>
+            <p class="text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
+                Start your journey today and build the skills that will make you future-proof in the tech industry.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <button class="bg-white text-indigo-900 px-6 py-3 rounded-lg font-medium hover:shadow-lg transition duration-300">
+                    <i class="fas fa-play-circle mr-2"></i> Start Learning
+                </button>
+                <button class="bg-transparent border border-white text-white px-6 py-3 rounded-lg font-medium hover:bg-white/10 transition duration-300">
+                    <i class="fas fa-info-circle mr-2"></i> Learn More
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <div class="flex items-center">
+                        <div class="h-10 w-10 rounded-lg bg-gradient-to-br from-blue-400 to-indigo-500 flex items-center justify-center mr-3">
+                            <i class="fas fa-code text-white text-xl"></i>
+                        </div>
+                        <h2 class="text-xl font-bold">MERN<span class="gradient-text">+AI</span> Roadmap</h2>
+                    </div>
+                    <p class="text-slate-400 mt-2">Your guide to becoming a full stack developer</p>
+                </div>
+
+                <div class="flex space-x-4">
+                    <a href="#" class="h-10 w-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-blue-500 transition duration-300">
+                        <i class="fab fa-twitter text-white"></i>
+                    </a>
+                    <a href="#" class="h-10 w-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-blue-700 transition duration-300">
+                        <i class="fab fa-linkedin-in text-white"></i>
+                    </a>
+                    <a href="#" class="h-10 w-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-slate-700 transition duration-300">
+                        <i class="fab fa-github text-white"></i>
+                    </a>
+                </div>
+            </div>
+
+            <hr class="border-slate-800 my-8">
+
+            <div class="text-center text-slate-500 text-sm">
+                &copy; 2023 MERN+AI Roadmap. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Note Modal -->
+    <div id="noteModal" class="modal fixed inset-0 z-50 hidden flex items-center justify-center">
+        <div class="modal-overlay absolute inset-0 bg-black opacity-50"></div>
+        <div class="modal-content bg-slate-800 w-full max-w-md mx-4 rounded-lg shadow-lg z-50 p-6">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-xl font-semibold" id="noteModalTitle">Add New Note</h3>
+                <button id="closeNoteModal" class="text-slate-400 hover:text-white">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <form id="noteForm">
+                <input type="hidden" id="noteId"> <!-- Hidden input for editing existing notes -->
+                <div class="mb-4">
+                    <label for="noteTitle" class="block text-sm font-medium text-slate-300 mb-2">Title</label>
+                    <input type="text" id="noteTitle" class="w-full bg-slate-700 border border-slate-600 rounded-lg py-2 px-4 text-white placeholder-slate-400 focus:outline-none focus:border-blue-500" placeholder="Note title" required>
+                </div>
+
+                <div class="mb-4">
+                    <label for="noteContent" class="block text-sm font-medium text-slate-300 mb-2">Content</label>
+                    <textarea id="noteContent" rows="5" class="w-full bg-slate-700 border border-slate-600 rounded-lg py-2 px-4 text-white placeholder-slate-400 focus:outline-none focus:border-blue-500" placeholder="Note content" required></textarea>
+                </div>
+
+                <div class="mb-4">
+                    <label for="noteCategory" class="block text-sm font-medium text-slate-300 mb-2">Category</label>
+                    <select id="noteCategory" class="w-full bg-slate-700 border border-slate-600 rounded-lg py-2 px-4 text-white focus:outline-none focus:border-blue-500">
+                        <option value="Phase 1: Web Development Foundations">Phase 1: Web Development Foundations</option>
+                        <option value="Phase 2: JavaScript Essentials">Phase 2: JavaScript Essentials</option>
+                        <option value="Phase 3: Asynchronous JavaScript & APIs">Phase 3: Asynchronous JavaScript & APIs</option>
+                        <option value="Phase 4: Version Control & Workflow">Phase 4: Version Control & Workflow</option>
+                        <option value="Phase 5: Backend with Node.js & Express">Phase 5: Backend with Node.js & Express</option>
+                        <option value="Phase 6: MongoDB & Database Logic">Phase 6: MongoDB & Database Logic</option>
+                        <option value="Phase 7: React.js Frontend">Phase 7: React.js Frontend</option>
+                        <option value="Phase 8: Full MERN Stack Integration">Phase 8: Full MERN Stack Integration</option>
+                        <option value="Phase 9: Hosting, Auth & DevOps">Phase 9: Hosting, Auth & DevOps</option>
+                        <option value="Phase 10: Python + AI Integration">Phase 10: Python + AI Integration</option>
+                        <option value="General">General</option>
+                    </select>
+                </div>
+
+                <div class="flex justify-end">
+                    <button type="button" id="cancelNoteBtn" class="bg-slate-700 text-white px-4 py-2 rounded-lg mr-2 hover:bg-slate-600 transition duration-300">Cancel</button>
+                    <button type="submit" id="saveNoteBtn" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition duration-300">Save Note</button>
+                </div>
             </form>
-        </div>
-
-        <div class="my-learning-section">
-            <h2 class="text-3xl font-extrabold mb-4">My Notes</h2>
-            <textarea placeholder="Write a new note here..." id="newNoteInput" class="w-full" aria-label="Write a new note"></textarea>
-            <button class="btn-primary" onclick="addNote()">Add Note</button>
-            <div id="notesList" class="notes-list"></div>
         </div>
     </div>
 
-    <footer>
-        © 2025 AI-Integrated MERN Roadmap. Designed for modern developers aiming for excellence and efficiency.
-    </footer>
+    <!-- Task Modal (for adding tasks with details) -->
+    <div id="taskModal" class="modal fixed inset-0 z-50 hidden flex items-center justify-center">
+        <div class="modal-overlay absolute inset-0 bg-black opacity-50"></div>
+        <div class="modal-content bg-slate-800 w-full max-w-md mx-4 rounded-lg shadow-lg z-50 p-6">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-xl font-semibold" id="taskModalTitle">Add New Task</h3>
+                <button id="closeTaskModal" class="text-slate-400 hover:text-white">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
 
-    <script src="script.js"></script>
+            <form id="taskForm">
+                <input type="hidden" id="modalTaskId"> <!-- Hidden input for editing existing tasks -->
+                <div class="mb-4">
+                    <label for="modalTaskTitle" class="block text-sm font-medium text-slate-300 mb-2">Task Description</label>
+                    <input type="text" id="modalTaskTitle" class="w-full bg-slate-700 border border-slate-600 rounded-lg py-2 px-4 text-white placeholder-slate-400 focus:outline-none focus:border-green-500" placeholder="What do you need to do?" required>
+                </div>
+
+                <div class="mb-4">
+                    <label for="modalTaskPriority" class="block text-sm font-medium text-slate-300 mb-2">Priority</label>
+                    <select id="modalTaskPriority" class="w-full bg-slate-700 border border-slate-600 rounded-lg py-2 px-4 text-white focus:outline-none focus:border-green-500">
+                        <option value="low">Low</option>
+                        <option value="medium" selected>Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                </div>
+
+                <div class="mb-4">
+                    <label for="modalTaskDeadline" class="block text-sm font-medium text-slate-300 mb-2">Deadline (Optional)</label>
+                    <input type="date" id="modalTaskDeadline" class="w-full bg-slate-700 border border-slate-600 rounded-lg py-2 px-4 text-white focus:outline-none focus:border-green-500">
+                </div>
+
+                <div class="flex justify-end">
+                    <button type="button" id="cancelTaskBtn" class="bg-slate-700 text-white px-4 py-2 rounded-lg mr-2 hover:bg-slate-600 transition duration-300">Cancel</button>
+                    <button type="submit" id="saveTaskBtn" class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition duration-300">Save Task</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Link to external JavaScript file -->
+    <script type="module" src="script.js"></script>
 </body>
 </html>
